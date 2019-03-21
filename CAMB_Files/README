@@ -1,0 +1,39 @@
+All the modifications to standard CAMB
+
+modules.f90 :: Line 114
+========================
+real(dl)  :: fofr0         
+========================
+
+modules.f90 :: End of file
+========================
+module FittingFormula 
+... (this is given in Fortran/fit.f90)
+end module FittingFormula
+========================
+
+inidriver.f90 :: Line 71
+========================
+P%fofr0 = Ini_Read_Double('fofr0',0.0d0)
+========================
+
+halofit_ppf.f90 :: Line 2932 (subroutine NonLinear_GetRatios)
+========================
+use FittingFormula, only: pofk_enhancement
+integer :: itf, i
+real(dl) :: zz, kk, ratio
+
+call NonLinear_GetNonLinRatios(CAMB_Pk)
+    
+! Apply MG enhancement
+if(CP%fofr0>0.0d0) then
+  do itf = 1, CAMB_Pk%num_z
+    zz = CAMB_Pk%Redshifts(itf)
+    do i=1, CAMB_Pk%num_k
+      kk = exp(CAMB_Pk%log_kh(i))
+      ratio = pofk_enhancement(zz,CP%fofr0,kk)
+      CAMB_Pk%nonlin_ratio(i,itf) = CAMB_Pk%nonlin_ratio(i,itf) * dsqrt(ratio)
+    end do
+  end do
+endif
+========================

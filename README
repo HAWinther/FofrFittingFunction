@@ -1,5 +1,4 @@
-# Fitting Formula Hu-Sawkicy
-This folder contains a fitting formula for the enhancement of the non-linear power-spectrum for the Hu-Sawkicky model wrt LCDM implemented in different languages.
+This folder contains the fitting formula implemented in different languages.
 
 The folder [CAMB\_Files] contains the modified CAMB files + description of the modifications needed.
 The folder [camb\_with\_fitting\_formula] contains a complete (the latest) version of CAMB with the modifications.

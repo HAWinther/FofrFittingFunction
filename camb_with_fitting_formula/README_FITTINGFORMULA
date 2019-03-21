@@ -1,0 +1,5 @@
+The non-linear fitting formula implemented in the latest version of CAMB
+If fofr0 != 0.0 in the parameterfile and do_nonlinear > 0 then output matter-power spectrum has the modifications
+
+TODO: implement the linear P(k) fitting formula.
+
