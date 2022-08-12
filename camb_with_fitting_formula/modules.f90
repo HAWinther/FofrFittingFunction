@@ -3333,6 +3333,9 @@
         g = g0 + g1*aminusone + g2*aminusone2
     
         ratio_by_param  = 1.0 + b * (1.0 + c*k) / (1.0 + e*k) * atan(d * k)**(1.0 + f + g * k)
+        if(ratio_by_param < 1.0) then
+          ratio_by_param = 1.0
+        endif
       end function
     
       function pofk_enhancement(zin,fR0in,kin)
