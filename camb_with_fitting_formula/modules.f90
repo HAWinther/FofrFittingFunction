@@ -3310,7 +3310,7 @@
         b1 = (param(1+ 1)) + (param(1+10))*r + (param(1+19))*r2
         b2 = (param(1+ 2)) + (param(1+11))*r + (param(1+20))*r2
         c0 = (param(1+ 3)) + (param(1+12))*r + (param(1+21))*r2 
-        c1 = (param(1+ 3)) + (param(1+13))*r + (param(1+22))*r2
+        c1 = (param(1+ 4)) + (param(1+13))*r + (param(1+22))*r2
         c2 = (param(1+ 5)) + (param(1+14))*r + (param(1+23))*r2
         d0 = (param(1+ 6)) + (param(1+15))*r + (param(1+24))*r2 
         d1 = (param(1+ 7)) + (param(1+16))*r + (param(1+25))*r2

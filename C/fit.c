@@ -20,7 +20,7 @@ double ratio_by_param(double r, double aminusone, double k, double *param){
   double b1 = (param[ 1]) + (param[10])*r + (param[19])*r2;
   double b2 = (param[ 2]) + (param[11])*r + (param[20])*r2;
   double c0 = (param[ 3]) + (param[12])*r + (param[21])*r2; 
-  double c1 = (param[ 3]) + (param[13])*r + (param[22])*r2;
+  double c1 = (param[ 4]) + (param[13])*r + (param[22])*r2;
   double c2 = (param[ 5]) + (param[14])*r + (param[23])*r2;
   double d0 = (param[ 6]) + (param[15])*r + (param[24])*r2; 
   double d1 = (param[ 7]) + (param[16])*r + (param[25])*r2;
